@@ -29,16 +29,21 @@ const styles = {
 // }
 
 class App4 extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      //state is an object count =Key :0: value
-      count: 0
-    };
-  }
+  state = {
+    //state is an object count =Key :0: value
+    count: 0
+  };
+
   increaseCount() {
+    // SYNCHORONOUS CODE
+
+    this.setState(prevState => {
+      console.log(prevState);
+      return { count: prevState.count + 1 };
+    });
     this.setState(prevState => ({ count: prevState.count + 1 }));
-    this.setState(prevState => ({ count: prevState.count + 1 }));
+
+    //ASYNCHRONOUS CODE
     // this.setState({count:this.state.count+1})
     // this.setState({count:this.state.count+1})
     console.log(this.state.count);
