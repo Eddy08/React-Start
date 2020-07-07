@@ -55,7 +55,7 @@ class App4 extends React.Component {
         <h1>
           State Props{" "}
           <span role="img" aria-label="car">
-            🚗
+            🍕
           </span>{" "}
         </h1>
         {/* Cannot bind increaseCount() */}
